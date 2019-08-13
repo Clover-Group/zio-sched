@@ -3,6 +3,7 @@ val FlinkVersion     = "1.8.1"
 val ScalaTestVersion = "3.0.8"
 val LogbackVersion   = "1.2.3"
 val ScalaLogVersion  = "3.9.2"
+val InfluxVersion    = "2.15"
 
 resolvers += Resolver.sonatypeRepo("releases")
 resolvers += Resolver.sonatypeRepo("snapshots")
@@ -17,6 +18,8 @@ libraryDependencies ++= Seq(
   "org.scalatest"              %% "scalatest"             % ScalaTestVersion % "test",
   "org.typelevel"              %% "cats-core"             % CatsVersion,
   "org.apache.flink"           %% "flink-streaming-scala" % FlinkVersion,
+  "org.apache.flink"           %% "flink-jdbc"            % FlinkVersion,
+  "org.influxdb"               % "influxdb-java"          % InfluxVersion,
   "ch.qos.logback"             % "logback-classic"        % LogbackVersion,
   "com.typesafe.scala-logging" %% "scala-logging"         % ScalaLogVersion
 )
